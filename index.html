@@ -11,9 +11,13 @@
 	<body>
 		<div class="container">
 			<section ng-controller="StoreController as store">
-				<h1>{{store.product.name}}</h1>
-				<p>{{store.product.price}}</p>
-				<button ng-show="store.product.canPurchase" class="btn btn-default">Add to Cart</button>
+				<section ng-repeat="product in store.products">
+					<div ng-hide="product.soldOut">
+						<h1>{{product.name}}</h1>
+						<p>{{product.price}}</p>
+						<button ng-show="product.canPurchase" class="btn btn-default">Add to Cart</button>
+					</div>
+				</section>
 			</section>
 		</div>
 	<!-- 	<section ng-controller="ListController">
