@@ -13,6 +13,7 @@
 			<section ng-controller="StoreController as store">
 				<h1>{{store.product.name}}</h1>
 				<p>{{store.product.price}}</p>
+				<button ng-show="store.product.canPurchase" class="btn btn-default">Add to Cart</button>
 			</section>
 		</div>
 	<!-- 	<section ng-controller="ListController">
